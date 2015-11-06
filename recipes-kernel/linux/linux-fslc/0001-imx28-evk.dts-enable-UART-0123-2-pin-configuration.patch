@@ -1,0 +1,43 @@
+From 80e7d10b3e3f8b5ddf5c0bf8d5ac691eecbc929e Mon Sep 17 00:00:00 2001
+From: Ivan Sergio Borgonovo <mail@webthatworks.it>
+Date: Thu, 5 Nov 2015 14:46:35 +0100
+Subject: [PATCH] imx28-evk.dts: enable UART 0123 2, pin configuration
+
+---
+ arch/arm/boot/dts/imx28-evk.dts | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/arch/arm/boot/dts/imx28-evk.dts b/arch/arm/boot/dts/imx28-evk.dts
+index 279249b..6aa96f9 100644
+--- a/arch/arm/boot/dts/imx28-evk.dts
++++ b/arch/arm/boot/dts/imx28-evk.dts
+@@ -223,14 +223,22 @@
+ 
+ 			auart0: serial@8006a000 {
+ 				pinctrl-names = "default";
+-				pinctrl-0 = <&auart0_pins_a>;
+-				fsl,uart-has-rtscts;
++				pinctrl-0 = <&auart0_2pins_a>;
++				status = "okay";
++			};
++			auart1: serial@8006c000 {
++				pinctrl-names = "default";
++				pinctrl-0 = <&auart1_2pins_a>;
++				status = "okay";
++			};
++			auart2: serial@8006e000 {
++				pinctrl-names = "default";
++				pinctrl-0 = <&auart2_2pins_a>;
+ 				status = "okay";
+ 			};
+-
+ 			auart3: serial@80070000 {
+ 				pinctrl-names = "default";
+-				pinctrl-0 = <&auart3_pins_a>;
++				pinctrl-0 = <&auart3_2pins_a>;
+ 				status = "okay";
+ 			};
+ 
+-- 
+2.6.2
+

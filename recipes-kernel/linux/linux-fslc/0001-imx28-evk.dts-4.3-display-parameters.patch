@@ -1,0 +1,35 @@
+From 882c90bba225965ea3d1a8a205fa300ce3a5d8b7 Mon Sep 17 00:00:00 2001
+From: Ivan Sergio Borgonovo <mail@webthatworks.it>
+Date: Thu, 5 Nov 2015 14:58:10 +0100
+Subject: [PATCH] imx28-evk.dts: 4.3" display parameters
+
+---
+ arch/arm/boot/dts/imx28-evk.dts | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/arch/arm/boot/dts/imx28-evk.dts b/arch/arm/boot/dts/imx28-evk.dts
+index 6aa96f9..1575e2a 100644
+--- a/arch/arm/boot/dts/imx28-evk.dts
++++ b/arch/arm/boot/dts/imx28-evk.dts
+@@ -135,12 +135,12 @@
+ 						native-mode = <&timing0>;
+ 						timing0: timing0 {
+ 							clock-frequency = <33500000>;
+-							hactive = <800>;
+-							vactive = <480>;
+-							hback-porch = <89>;
+-							hfront-porch = <164>;
+-							vback-porch = <23>;
+-							vfront-porch = <10>;
++							hactive = <480>;
++							vactive = <272>;
++							hback-porch = <2>;
++							hfront-porch = <2>;
++							vback-porch = <2>;
++							vfront-porch = <2>;
+ 							hsync-len = <10>;
+ 							vsync-len = <10>;
+ 							hsync-active = <0>;
+-- 
+2.6.2
+

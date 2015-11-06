@@ -16,8 +16,8 @@ This layer depends on:
   layers: meta
   branch: master
 
-	URI: https://github.com/Freescale/meta-fsl-arm
-	branch: fido
+  URI: https://github.com/Freescale/meta-fsl-arm
+  branch: fido
 
 Patches
 =======
@@ -35,11 +35,6 @@ Table of Contents
 I. Adding the fsl-di layer to your build
 =================================================
 
---- replace with specific instructions for the fsl-di layer ---
-
-In order to use this layer, you need to make the build system aware of
-it.
-
 Assuming the fsl-di layer exists at the top-level of your
 yocto build tree, you can add it to the build system by adding the
 location of the fsl-di layer to bblayers.conf, along with any
@@ -48,11 +43,20 @@ other layers needed. e.g.:
   BBLAYERS ?= " \
     /path/to/yocto/meta \
     /path/to/yocto/meta-yocto \
-    /path/to/yocto/meta-yocto-bsp \
+    /path/to/yocto/meta-openembedded/meta-oe \
+    /path/to/yocto/meta-openembedded/meta-multimedia \
+    /path/to/yocto/meta-fsl-arm \
     /path/to/yocto/meta-fsl-di \
     "
 
 
 II. Misc
 ========
+This layer provide kernel 4.1 support for
+http://www.itrontft.com/NewWeb/tft/overview/overview.asp
+
+This layer just support the 4.3" display board. It shouldn't be
+hard to add support for the other displays.
+As well some of the pin could be reconfigured to support other
+configuration provided by the manufacturer.
 
